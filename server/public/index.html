@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChiYaks</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="vendors/jquery.js">
+    </script>
+    <!-- Client -->
+    <script type="text/javascript" src="scripts/client.js">
+    </script>
+  </head>
+  <body>
+    <div class="container" id="main-container">
+      <h1>KAYAKS</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 add-form">
+          <h4>ADD NEW</h4>
+          <!-- Submit a new kayak to the server -->
+          <form id="addKayak" class="form-horizontal">
+            <div class="form-group">
+              <label for="make" class="col-sm-2 control-label">Make</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="make" name="make">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="model" class="col-sm-2 control-label">Model</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="model" name="model">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quantity" class="col-sm-2 control-label">Quantity</label>
+              <div class="col-sm-10">
+                <input type="numeric" class="form-control" id="quantity" name="quantity">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="price" class="col-sm-2 control-label">Price</label>
+              <div class="col-sm-10">
+                <div class="input-group">
+                  <div class="input-group-addon">$</div>
+                  <input type="text" class="form-control" id="price" name="price">
+                  <div class="input-group-addon">.00</div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Kayak</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>FEATURED</h4>
+          <!-- Used to display the most liked kayak -->
+          <div id="featuredKayak">
+            <div>
+              <span class="glyphicon glyphicon-star big-glyph" aria-hidden="true"></span>
+            </div>
+            <div>
+              <p id="featuredMake">Make</p>
+              <p id="featuredModel">Model</p>
+            </div>
+          </div>
+
+          <h4>SEARCH EXISTING</h4>
+          <!-- Search for an existing kayak -->
+          <form id="searchForm" class="form-horizontal">
+            <div class="form-group">
+              <label for="search" class="col-sm-2 control-label">Search</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="search" name="search">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <!-- Table used to display the kayaks and search results -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="kayakList">
+          <!-- SAMPLE data, remove after the GET request is working -->
+          <tr>
+            <td>99</td>
+            <td>Example</td>
+            <td>Entry (will be replaced)</td>
+            <td>$0.99</td>
+            <td>100</td>
+            <td>
+              <span class="glyphicon glyphicon-thumbs-up glyph-button like" data-kayak="99" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-remove glyph-button delete" data-kayak="99" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-plus glyph-button add" data-kayak="99" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-shopping-cart glyph-button cart" data-kayak="99" role="button" aria-hidden="true"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>Example</td>
+            <td>Entry (will be replaced)</td>
+            <td>$0.99</td>
+            <td>100</td>
+            <td>
+              <span class="glyphicon glyphicon-thumbs-up glyph-button like" data-kayak="100" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-remove glyph-button delete" data-kayak="100" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-plus glyph-button add" data-kayak="100" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-shopping-cart glyph-button cart" data-kayak="100" role="button" aria-hidden="true"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Example</td>
+            <td>Entry (will be replaced)</td>
+            <td>$0.99</td>
+            <td>100</td>
+            <td>
+              <span class="glyphicon glyphicon-thumbs-up glyph-button like" data-kayak="101" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-remove glyph-button delete" data-kayak="101" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-plus glyph-button add" data-kayak="101" role="button" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-shopping-cart glyph-button cart" data-kayak="101" role="button" aria-hidden="true"></span>
+            </td>
+          </tr>
+          <!-- END sample data -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Kayaks</p>
+      </div>
+    </footer>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendors/js/bootstrap.min.js"></script>
+  </body>
+</html>

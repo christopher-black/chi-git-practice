@@ -1,0 +1,83 @@
+/* Colors:
+ * http://www.color-hex.com/color-palette/5452
+ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #f9f9f9;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: white;
+}
+
+.footer .container {
+  height: 100%;
+
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+}
+
+.form-horizontal .btn-primary {
+  float:right;
+}
+
+.big-glyph {
+  font-size: 60px;
+}
+
+.glyph-button {
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 20px;
+}
+
+.glyph-button:hover{
+  color: #5cb85c;
+}
+
+.glyphicon-thumbs-up:hover {
+  color: #428bca;
+}
+
+.glyphicon-remove:hover {
+  color: #d9534f;
+}
+
+.add-form {
+  overflow: auto;
+}
+
+#main-container {
+  min-height: 100%;
+}
+
+#featuredKayak {
+  background-color: #f9f9f9;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  color: #428bca;
+  overflow: auto;
+}
+
+#featuredKayak div {
+  float:left;
+  padding: 10px;
+}
+
+#featuredKayak p {
+  font-size: 16px;
+}
