@@ -1,20 +1,22 @@
 var express = require('express');
 var router = express.Router();
-var pg = require('pg');
 
-var config = {
-  database: 'chi', // name of your database
-  host: 'localhost', // where is your database?
-  port: 5432, // port for the database
-  max: 10, // how many connections at one time
-  idleTimeoutMillis: 30000 // 30 seconds to try to connect
-};
+// No need to re-connect but we do need the mongoose object
+var mongoose = require('mongoose');
 
-var pool = new pg.Pool(config);
+var KayakSchema = mongoose.Schema({
+  make : String,
+  model : String,
+  price : Number,
+  quantity : Number
+});
+
+//Collection that points to a schema which dictates how documents are saved.
+var Kayak = mongoose.model('Kayaks', KayakSchema);
 
 router.get('/', function(req, res){
   // TASK 1: BEGIN
-
+  
 
   // TASK 1: END
 });

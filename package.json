@@ -1,26 +1,18 @@
 {
   "name": "chi-git-practice",
   "version": "1.0.0",
-  "description": "1. Request access to the repo 2. Clone the repo to your computer using `git clone REPO_URL` 3. `cd` into the repo folder and run `npm install` 4. Open Postico and run the following queries in your `chi` database:",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/christopher-black/chi-git-practice.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/christopher-black/chi-git-practice/issues"
-  },
-  "homepage": "https://github.com/christopher-black/chi-git-practice#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "jquery": "^3.2.1",
-    "pg": "^6.1.5"
+    "mongoose": "^4.9.2"
   }
 }

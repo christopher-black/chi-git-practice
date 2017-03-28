@@ -8,24 +8,7 @@
 5. Create a branch for your feature `git branch feature-YOUR-FEATURE`
 6. Switch to that branch `git checkout feature-YOUR-FEATURE`
 7. Run `npm install`
-8. Open Postico and run the following queries in your `chi` database:
-
-  ```
-  CREATE TABLE kayaks(
-  	id SERIAL PRIMARY KEY,
-  	make VARCHAR (100) NOT NULL,
-  	model VARCHAR (100) NOT NULL,
-    likes INTEGER DEFAULT 0,
-  	price NUMERIC(12,2),
-  	quantity INTEGER
-  );
-
-  INSERT INTO kayaks (make, model, price, quantity)
-  VALUES ('Sun Dolphin', 'Aruba 10', 149.99, 10),
-  ('Wilderness Systems', 'Aspire', 779.00, 8),
-  ('Sun Dolphin', 'Aruba SS 12', 408.99, 12),
-  ('Old Town', 'Vapor 10', 399.99, 6);
-  ```
+8. Ensure Mongo is running `mongod`
 9. Complete your task
 10. Follow the [instructions](https://github.com/christopher-black/chi-git-examples) for merging your task into `develop`
 
@@ -35,7 +18,6 @@ Pick a task from the list. Look for the code comment associated to your task. Ad
 ## Task List
 **Setup**
 - [x] Set up Node
-- [x] Database queries
 - [x] index.html with basic template
 - [x] Add tasks
 
